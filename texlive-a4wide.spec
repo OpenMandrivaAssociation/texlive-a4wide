@@ -3,7 +3,7 @@ Version:	20110105
 Release:	1
 Summary:	"Wide" a4 layout
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive//macros/latex/contrib/a4wide
+URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
 License:	LPPL1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.doc.tar.xz
@@ -27,11 +27,13 @@ package.
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
