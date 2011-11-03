@@ -1,3 +1,9 @@
+# revision 20943
+# category Package
+# catalog-ctan /macros/latex/contrib/a4wide
+# catalog-date 2011-01-05 08:46:38 +0100
+# catalog-license lppl1
+# catalog-version undef
 Name:		texlive-a4wide
 Version:	20110105
 Release:	1
@@ -41,6 +47,7 @@ package.
 %{_texmfdistdir}/tex/latex/a4wide/a4wide.sty
 %doc %{_texmfdistdir}/doc/latex/a4wide/a4wide.pdf
 %doc %{_texmfdistdir}/doc/latex/a4wide/a4wide.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
