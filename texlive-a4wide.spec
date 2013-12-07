@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-a4wide
 Version:	20110105
-Release:	4
+Release:	5
 Summary:	"Wide" a4 layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
