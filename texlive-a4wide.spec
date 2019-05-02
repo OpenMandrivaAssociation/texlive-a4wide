@@ -5,8 +5,8 @@
 # catalog-license lppl1
 # catalog-version undef
 Name:		texlive-a4wide
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	"Wide" a4 layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
