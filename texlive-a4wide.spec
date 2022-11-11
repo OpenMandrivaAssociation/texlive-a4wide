@@ -1,18 +1,12 @@
-# revision 20943
-# category Package
-# catalog-ctan /macros/latex/contrib/a4wide
-# catalog-date 2011-01-05 08:46:38 +0100
-# catalog-license lppl1
-# catalog-version undef
 Name:		texlive-a4wide
-Version:	20190228
+Version:	20943
 Release:	1
 Summary:	"Wide" a4 layout
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
 License:	LPPL1
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ provided by the geometry package. The package uses the a4
 package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,25 +35,10 @@ package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20110105-2
-+ Revision: 749038
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20110105-1
-+ Revision: 717779
-- texlive-a4wide
-- texlive-a4wide
-- texlive-a4wide
-- texlive-a4wide
-- texlive-a4wide
-
