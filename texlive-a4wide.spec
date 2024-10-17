@@ -3,7 +3,7 @@ Version:	20943
 Release:	2
 Summary:	"Wide" a4 layout
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/a4wide
 License:	LPPL1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/a4wide.doc.r%{version}.tar.xz
